@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alışveriiş Sepeti</title>
+  <link rel="stylesheet" href="assets/css/alisveris.css">
+  <script src="assets/js/alisveris.js"defer></script>
+</head>
+<body>
+  <div class="container">
+
+    <form class="alisverisForm">
+  
+      <div class="urun-item">
+        <label for="name">Ürün adı: </label>
+        <input required type="text" name="name">
+      </div>
+  
+      <div class="urun-item">
+        <label for="fiyat" >Ürün Fiyatı: </label>
+        <input required type="text" name="fiyat">
+      </div>
+  
+      <div class="urun-item">
+        <label for="catagory" >Ürün Katagorisi: </label>
+        <select name="catagory" id="catagory">
+          <option selected value="" disabled>Lütfen Katagori Seçiniz</option>
+          <option value="giyim">Giyim ve Aksesuar</option>
+          <option value="elektronik">Elektronik</option>
+          <option value="ev">Ev ve Yaşam</option>
+          <option value="kozmetik">Kozmetik</option>
+          <option value="spor">Spor</option>
+        </select>
+      </div>
+  
+      <div class="urun-item">
+        <label for="rengi">Ürün Rengi: </label>
+        <input required type="text" name="rengi">
+      </div>
+  
+      <button class="add" type="submit">Ürün Listesine Ekle</button>
+      <button class="delete">Ürün Listesini Sıfırla</button>
+  
+    </form>
+    
+    <div class="urunler">
+      <h2>Giyim ve Aksesuar Listesi: </h2>
+      <div class="giyim"></div>
+      <h2>Elektronik Listesi: </h2>
+      <div class="elektronik"></div>
+      <h2>Ev ve Yaşam Listesi:</h2>
+      <div class="ev"></div>
+      <h2>Kozmetik Listesi: </h2>
+      <div class="kozmetik"></div>
+      <h2>Spor Listesi: </h2>
+      <div class="spor"></div>
+    </div>
+
+    <div class="alisverisSepeti"></div>
+
+  </div>
+
+
+
+  
+</body>
+</html>
