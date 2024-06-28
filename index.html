@@ -3,66 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alışveriiş Sepeti</title>
+  <title>Alışveriş Sepeti</title>
   <link rel="stylesheet" href="assets/css/alisveris.css">
-  <script src="assets/js/alisveris.js"defer></script>
+  <script src="assets/js/alisveris.js" defer></script>
 </head>
 <body>
+  
   <div class="container">
-
-    <form class="alisverisForm">
-  
-      <div class="urun-item">
-        <label for="name">Ürün adı: </label>
-        <input required type="text" name="name">
-      </div>
-  
-      <div class="urun-item">
-        <label for="fiyat" >Ürün Fiyatı: </label>
-        <input required type="text" name="fiyat">
-      </div>
-  
-      <div class="urun-item">
-        <label for="catagory" >Ürün Katagorisi: </label>
-        <select name="catagory" id="catagory">
-          <option selected value="" disabled>Lütfen Katagori Seçiniz</option>
-          <option value="giyim">Giyim ve Aksesuar</option>
-          <option value="elektronik">Elektronik</option>
-          <option value="ev">Ev ve Yaşam</option>
-          <option value="kozmetik">Kozmetik</option>
-          <option value="spor">Spor</option>
-        </select>
-      </div>
-  
-      <div class="urun-item">
-        <label for="rengi">Ürün Rengi: </label>
-        <input required type="text" name="rengi">
-      </div>
-  
-      <button class="add" type="submit">Ürün Listesine Ekle</button>
-      <button class="delete">Ürün Listesini Sıfırla</button>
-  
-    </form>
     
-    <div class="urunler">
-      <h2>Giyim ve Aksesuar Listesi: </h2>
-      <div class="giyim"></div>
-      <h2>Elektronik Listesi: </h2>
-      <div class="elektronik"></div>
-      <h2>Ev ve Yaşam Listesi:</h2>
-      <div class="ev"></div>
-      <h2>Kozmetik Listesi: </h2>
-      <div class="kozmetik"></div>
-      <h2>Spor Listesi: </h2>
-      <div class="spor"></div>
-    </div>
+    <header class="alisverisHeader">
+      <h1>Alışveriş Sepeti</h1>
+      <button id="addUrunBtn">Ekle</button>
+    </header>
 
-    <div class="alisverisSepeti"></div>
+    <div class="urunler" id="alisverisContainer"></div>
 
   </div>
 
+  <dialog id="modal">
+    <h2 class="modelAddNew">Ürün Ekle</h2>
+    <h2 class="modelEdit">Ürünü Düzenle</h2>
+    <form method="dialog" autocomplete="off" id="addAlisverisForm">
+      <label for="name">Ürün Adı: </label> <input required type="text" name="name" placeholder="Adı">
+      <label for="fiyat">Ürün Fiyatı: </label> <input required type="number" name="fiyat" placeholder="Fiyat">
+      <label for="renk">Ürün Rengi: </label> <input required type="text" name="renk" placeholder="Renk">
+      <label for="category">Ürün Kategorisi: </label>
+      <select for="category" id="category" name="category">Kategori Seçiniz:
+        <option name="moda" id="moda">Moda</option>
+        <option name="teknoloji" id="teknoloji">Teknoloji</option>
+        <option name="gezi" id="gezi">Gezi</option>
+        <option name="yemek" id="yemek">Yemek</option>
+        <option name="kitap" id="kitap">Kitap</option>
+      </select>
 
+      <button class="modelAddNew">Ekle</button> <button class="modelEdit">Kaydet</button> <button type="button" onclick="addMovieForm.reset();modal.close();">Vazgeç</button>
+      <input type="hidden" name="id" value="">
+    </form>
+  </dialog>
 
-  
 </body>
 </html>
