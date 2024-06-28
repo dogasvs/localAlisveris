@@ -1,12 +1,6 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
+.urunEditControls svg {
+  width: 16px;
+  height: 16px;
 }
 
 body {
@@ -14,75 +8,108 @@ body {
   background-color: #f4f4f4;
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
 }
 
-form.alisverisForm {
-  background: white;
+.container {
+  max-width: 800px;
+  margin: 20px auto;
   padding: 20px;
-  border-radius: 8px;
+  background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 600px;
 }
 
-.urun-item {
-  margin-bottom: 15px;
+.alisverisHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-.urun-item label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
+.alisverisHeader h1 {
+  margin: 0;
+  font-size: 24px;
 }
 
-.urun-item input, .urun-item select {
-  width: 570px;
-  padding: 8px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-button {
-  padding: 10px 15px;
+.alisverisHeader button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007BFF;
+  color: #fff;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
+}
+
+.alisverisHeader button:hover {
+  background-color: #0056b3;
+}
+
+.urunler {
+  margin-bottom: 20px;
+}
+
+dialog {
+  width: 500px;
+  padding: 20px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
   margin-top: 10px;
 }
 
-button.add {
-  width: 550px;
-  background-color: #28a745;
-  color: white;
-}
-
-button.delete {
-  width: 550px;
-  background-color: #dc3545;
-  color: white;
-}
-
-.urunler, .alisverisSepeti {
-  margin-top: 20px;
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.urun {
-  width: 200px;
+form input, form select {
+  margin-top: 5px;
   padding: 10px;
-  margin-block: 16px;
-  border: none;
-  background-color: cornsilk;
-  border-radius: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-.urun:last-child {
-  border-bottom: none;
+form button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+.vazgec {
+  background-color: #6c757d;
+}
+
+.vazgec:hover {
+  background-color: #5a6268;
+}
+
+form p {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.urun{
+  width: 200px;
+  background-color: #f491c4;
+  padding: 20px;
+  border-radius: 10px;
 }
